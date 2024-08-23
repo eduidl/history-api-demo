@@ -34,10 +34,11 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      const modal = new bootstrap.Modal(
+        document.getElementById("modal")
+      );
+
       window.addEventListener("popstate", (e) => {
-        const modal = new bootstrap.Modal(
-          document.getElementById("modal")
-        );
         if (e.state && e.state.ad === 1) {
           modal.show();
         } else {
